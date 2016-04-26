@@ -5,11 +5,13 @@ var assign = require('object-assign');
 var Bouncefix = React.createClass({
     displayName: 'Bouncefix',
     propTypes: {
-        componentClass: React.PropTypes.node
+        componentClass: React.PropTypes.node,
+        bumpPixels: React.PropTypes.number
     },
     getDefaultProps: function() {
         return {
-            componentClass: 'div'
+            componentClass: 'div',
+            bumpPixels: 1
         };
     },
     scrollToEnd: function(el) {
@@ -18,11 +20,11 @@ var Bouncefix = React.createClass({
             scroll = el.scrollHeight;
 
         // If at top, bump down 1px
-        if(curPos <= 0) { el.scrollTop = 1; }
+        if(curPos <= 0) { el.scrollTop = this.props.bumpPixels; }
 
         // If at bottom, bump up 1px
         if(curPos + height >= scroll) {
-            el.scrollTop = scroll - height - 1;
+            el.scrollTop = scroll - height - this.props.bumpPixels;
         }
     },
     onTouchStart: function(e) {
