@@ -1,6 +1,6 @@
 {
   "name": "react-scrollbouncefix",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A ReactJS component to stop elastic bouncing on body",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
     "prop-types": ">=15.0.0"
   },
   "dependencies": {
+    "create-react-class": ">=15.0.0",
     "prop-types": "^15.6.2"
   }
 }
