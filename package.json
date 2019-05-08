@@ -1,5 +1,5 @@
 {
-  "name": "@equinoxfires/react-bouncefix",
+  "name": "rudza/react-scrollbouncefix",
   "version": "0.2.1",
   "description": "A ReactJS component to stop elastic bouncing on body",
   "main": "index.js",
